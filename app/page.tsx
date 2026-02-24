@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useCallback } from 'react'
+import { useState, useCallback, type ReactNode } from 'react'
 import { callAIAgent } from '@/lib/aiAgent'
 import parseLLMJson from '@/lib/jsonParser'
 import { FiZap, FiPlay, FiGlobe, FiTrendingUp, FiSearch, FiClock, FiTarget, FiUsers, FiBarChart2, FiHash, FiChevronDown, FiChevronUp, FiStar, FiMapPin, FiAward, FiActivity, FiCalendar, FiMessageCircle, FiCheck, FiAlertCircle, FiLoader } from 'react-icons/fi'
@@ -303,36 +303,6 @@ function renderMarkdown(text: string) {
   )
 }
 
-// ─── ErrorBoundary ───────────────────────────────────────────
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  { hasError: boolean; error: string }
-> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props)
-    this.state = { hasError: false, error: '' }
-  }
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error: error.message }
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
-          <div className="text-center p-8 max-w-md">
-            <h2 className="text-xl font-semibold mb-2">Something went wrong</h2>
-            <p className="text-muted-foreground mb-4 text-sm">{this.state.error}</p>
-            <button onClick={() => this.setState({ hasError: false, error: '' })} className="px-4 py-2 bg-primary text-primary-foreground rounded text-sm">
-              Try again
-            </button>
-          </div>
-        </div>
-      )
-    }
-    return this.props.children
-  }
-}
-
 // ─── Helper: Heat Score to percentage ────────────────────────
 function parseHeatScore(score?: string): number {
   if (!score) return 0
@@ -367,7 +337,7 @@ function PlatformIcon({ platform }: { platform?: string }) {
 }
 
 // ─── GlassCard Component ─────────────────────────────────────
-function GlassCard({ title, icon, children, className }: { title: string; icon: React.ReactNode; children: React.ReactNode; className?: string }) {
+function GlassCard({ title, icon, children, className }: { title: string; icon: ReactNode; children: ReactNode; className?: string }) {
   return (
     <div className={`bg-card/80 backdrop-blur-[12px] border border-white/10 rounded p-5 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,255,0.1)] ${className ?? ''}`}>
       <div className="flex items-center gap-2 mb-4">
@@ -1137,7 +1107,6 @@ export default function Page() {
   ]
 
   return (
-    <ErrorBoundary>
       <div className="min-h-screen bg-background text-foreground" style={{ background: 'linear-gradient(135deg, hsl(260 35% 8%) 0%, hsl(280 30% 10%) 50%, hsl(240 25% 8%) 100%)' }}>
         {/* Header */}
         <header className="border-b border-border/30 backdrop-blur-[12px]">
@@ -1213,6 +1182,5 @@ export default function Page() {
           </div>
         </footer>
       </div>
-    </ErrorBoundary>
   )
 }
