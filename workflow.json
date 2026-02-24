@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Query",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "match_script_agent",
+      "type": "Agent",
+      "label": "Match Script Generator",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "african_spotlight_agent",
+      "type": "Agent",
+      "label": "African Football Spotlight",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "trending_content_agent",
+      "type": "Agent",
+      "label": "Trending Content Curator",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Content Output",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    { "source": "input_node", "target": "match_script_agent" },
+    { "source": "input_node", "target": "african_spotlight_agent" },
+    { "source": "input_node", "target": "trending_content_agent" },
+    { "source": "match_script_agent", "target": "output_node" },
+    { "source": "african_spotlight_agent", "target": "output_node" },
+    { "source": "trending_content_agent", "target": "output_node" }
+  ]
+}

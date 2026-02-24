@@ -1,0 +1,51 @@
+{
+  "agents": {
+    "match_script_agent": {
+      "agent_id": "699dd90e90552d84a0b08eda",
+      "name": "match_script_agent",
+      "label": "Match Script Generator",
+      "description": "Football match analyst and viral video script writer that analyzes matches from any league worldwide and generates engaging, hype-style short video scripts with trending social media reactions, hashtags, and viral hooks.",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "agent_type": "json",
+      "has_image_output": false,
+      "has_voice": false,
+      "has_file_output": false,
+      "response_schema_file": "response_schemas/match_script_agent_response.json"
+    },
+    "african_spotlight_agent": {
+      "agent_id": "699dd90e29e0605963abe675",
+      "name": "african_spotlight_agent",
+      "label": "African Football Spotlight",
+      "description": "African football content specialist with Kenyan focus that creates dedicated content highlighting African players across global leagues with special emphasis on Kenyan football talent, stories, and achievements.",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "agent_type": "json",
+      "has_image_output": false,
+      "has_voice": false,
+      "has_file_output": false,
+      "response_schema_file": "response_schemas/african_spotlight_agent_response.json"
+    },
+    "trending_content_agent": {
+      "agent_id": "699dd90f89f6b3ac7d49e083",
+      "name": "trending_content_agent",
+      "label": "Trending Content Curator",
+      "description": "Football trending topics curator and viral content strategist that monitors and curates trending football topics, memes, debates, and viral moments across social media, generating ready-to-publish content packages.",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "agent_type": "json",
+      "has_image_output": false,
+      "has_voice": false,
+      "has_file_output": false,
+      "response_schema_file": "response_schemas/trending_content_agent_response.json"
+    }
+  },
+  "workflow_pattern": "independent",
+  "total_agents": 3
+}

@@ -1,0 +1,94 @@
+{
+  "agent_name": "match_script_agent",
+  "agent_id": "699dd90e90552d84a0b08eda",
+  "description": "Football match analyst and viral video script writer that analyzes matches from any league worldwide and generates engaging, hype-style short video scripts with trending social media reactions, hashtags, and viral hooks.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "match_analysis": {
+      "teams": "string",
+      "league": "string",
+      "score_or_prediction": "string",
+      "key_players": [
+        "string"
+      ],
+      "tactical_notes": "string"
+    },
+    "video_script": {
+      "hook": "string",
+      "intro": "string",
+      "body_segments": [
+        {
+          "timestamp": "string",
+          "content": "string",
+          "visual_cue": "string"
+        }
+      ],
+      "outro": "string",
+      "call_to_action": "string"
+    },
+    "social_media": {
+      "hashtags": [
+        "string"
+      ],
+      "caption": "string",
+      "best_posting_time": "string",
+      "platform_tips": [
+        "string"
+      ]
+    },
+    "engagement_metrics": {
+      "estimated_reach": "string",
+      "target_audience": "string",
+      "viral_potential": "string"
+    }
+  },
+  "example_response": {
+    "match_analysis": {
+      "teams": "sample string",
+      "league": "sample string",
+      "score_or_prediction": "sample string",
+      "key_players": [
+        "sample string"
+      ],
+      "tactical_notes": "sample string"
+    },
+    "video_script": {
+      "hook": "sample string",
+      "intro": "sample string",
+      "body_segments": [
+        {
+          "timestamp": "sample string",
+          "content": "sample string",
+          "visual_cue": "sample string"
+        }
+      ],
+      "outro": "sample string",
+      "call_to_action": "sample string"
+    },
+    "social_media": {
+      "hashtags": [
+        "sample string"
+      ],
+      "caption": "sample string",
+      "best_posting_time": "sample string",
+      "platform_tips": [
+        "sample string"
+      ]
+    },
+    "engagement_metrics": {
+      "estimated_reach": "sample string",
+      "target_audience": "sample string",
+      "viral_potential": "sample string"
+    }
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

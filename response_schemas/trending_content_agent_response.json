@@ -1,0 +1,124 @@
+{
+  "agent_name": "trending_content_agent",
+  "agent_id": "699dd90f89f6b3ac7d49e083",
+  "description": "Football trending topics curator and viral content strategist that monitors and curates trending football topics, memes, debates, and viral moments across social media, generating ready-to-publish content packages.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "trending_topics": {
+      "topics": [
+        {
+          "title": "string",
+          "category": "string",
+          "heat_score": "string",
+          "summary": "string"
+        }
+      ],
+      "overall_trend_direction": "string"
+    },
+    "viral_moments": {
+      "moments": [
+        {
+          "description": "string",
+          "platform": "string",
+          "engagement_level": "string",
+          "content_angle": "string"
+        }
+      ]
+    },
+    "content_packages": {
+      "tiktok_ideas": [
+        "string"
+      ],
+      "youtube_shorts": [
+        "string"
+      ],
+      "twitter_threads": [
+        "string"
+      ],
+      "instagram_reels": [
+        "string"
+      ]
+    },
+    "debate_corner": {
+      "hot_take": "string",
+      "arguments_for": [
+        "string"
+      ],
+      "arguments_against": [
+        "string"
+      ],
+      "poll_question": "string"
+    },
+    "content_calendar": {
+      "today": [
+        "string"
+      ],
+      "this_week": [
+        "string"
+      ],
+      "predictions": [
+        "string"
+      ]
+    }
+  },
+  "example_response": {
+    "trending_topics": {
+      "topics": [
+        {
+          "title": "sample string",
+          "category": "sample string",
+          "heat_score": "sample string",
+          "summary": "sample string"
+        }
+      ],
+      "overall_trend_direction": "sample string"
+    },
+    "viral_moments": {
+      "moments": [
+        {
+          "description": "sample string",
+          "platform": "sample string",
+          "engagement_level": "sample string",
+          "content_angle": "sample string"
+        }
+      ]
+    },
+    "content_packages": {
+      "tiktok_ideas": [
+        "sample string"
+      ],
+      "youtube_shorts": [
+        "sample string"
+      ],
+      "twitter_threads": [
+        "sample string"
+      ],
+      "instagram_reels": [
+        "sample string"
+      ]
+    },
+    "debate_corner": {
+      "hot_take": "sample string",
+      "arguments_for": [
+        "sample string"
+      ],
+      "arguments_against": [
+        "sample string"
+      ],
+      "poll_question": "sample string"
+    },
+    "content_calendar": {
+      "today": [
+        "sample string"
+      ],
+      "this_week": [
+        "sample string"
+      ],
+      "predictions": [
+        "sample string"
+      ]
+    }
+  }
+}

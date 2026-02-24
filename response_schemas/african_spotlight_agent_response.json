@@ -1,0 +1,106 @@
+{
+  "agent_name": "african_spotlight_agent",
+  "agent_id": "699dd90e29e0605963abe675",
+  "description": "African football content specialist with Kenyan focus that creates dedicated content highlighting African players across global leagues with special emphasis on Kenyan football talent, stories, and achievements.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "player_spotlight": {
+      "name": "string",
+      "nationality": "string",
+      "club": "string",
+      "league": "string",
+      "position": "string",
+      "recent_form": "string",
+      "career_highlights": [
+        "string"
+      ]
+    },
+    "african_football_news": {
+      "headlines": [
+        {
+          "title": "string",
+          "summary": "string",
+          "region": "string"
+        }
+      ],
+      "trending_transfers": [
+        "string"
+      ]
+    },
+    "kenyan_spotlight": {
+      "featured_story": "string",
+      "kpl_updates": [
+        "string"
+      ],
+      "rising_talents": [
+        {
+          "name": "string",
+          "age": "string",
+          "club": "string",
+          "potential_rating": "string"
+        }
+      ]
+    },
+    "content_package": {
+      "article_draft": "string",
+      "social_posts": [
+        "string"
+      ],
+      "video_script_hook": "string",
+      "hashtags": [
+        "string"
+      ]
+    }
+  },
+  "example_response": {
+    "player_spotlight": {
+      "name": "sample string",
+      "nationality": "sample string",
+      "club": "sample string",
+      "league": "sample string",
+      "position": "sample string",
+      "recent_form": "sample string",
+      "career_highlights": [
+        "sample string"
+      ]
+    },
+    "african_football_news": {
+      "headlines": [
+        {
+          "title": "sample string",
+          "summary": "sample string",
+          "region": "sample string"
+        }
+      ],
+      "trending_transfers": [
+        "sample string"
+      ]
+    },
+    "kenyan_spotlight": {
+      "featured_story": "sample string",
+      "kpl_updates": [
+        "sample string"
+      ],
+      "rising_talents": [
+        {
+          "name": "sample string",
+          "age": "sample string",
+          "club": "sample string",
+          "potential_rating": "sample string"
+        }
+      ]
+    },
+    "content_package": {
+      "article_draft": "sample string",
+      "social_posts": [
+        "sample string"
+      ],
+      "video_script_hook": "sample string",
+      "hashtags": [
+        "sample string"
+      ]
+    }
+  }
+}
